@@ -31,6 +31,10 @@ app.use('/test-jwt', testJwtRouter);
 app.use('/users', usersRouter);
 app.use('/movies', moviesRouter);
 
+app.get('/', (req, res) => {
+  res.send('Movies Blog backend is working!');
+});
+
 const PORT = process.env.PORT || 3000;
 
 // Start the server and listen on port 3000
