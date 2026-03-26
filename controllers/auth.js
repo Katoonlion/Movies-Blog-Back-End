@@ -9,6 +9,7 @@ const User = require('../models/user');
 
 const saltRounds = 12;
 
+// SIGN-UP
 router.post('/sign-up', async (req, res) => {
   try {
     const userInDatabase = await User.findOne({ username: req.body.username });
